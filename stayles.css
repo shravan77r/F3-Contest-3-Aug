@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Inter;
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin-left: 20px;
+  }
+  .nav-menu li a {
+    color: white;
+    text-decoration: none;
+  }
+
+
+  .signup-form {
+    margin: auto;
+    padding: 20px;
+    width: 550px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group input {
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    color: white;
+  }
+
+  input:focus {
+    border-bottom: 1px solid #203fac;
+  }
+
+  #btnsubmit {
+    width: 200px;
+    color: #333;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  #validation-message {
+    color: red;
+  }
+
+  #success-message{
+    color: green;
+  }
+
+.profile{
+    margin: auto;
+    width: 550px;
+    padding: 20px;
+}
+#btnlogout {
+    width: 150px;
+    padding: 10px;
+    color: #333;
+    background-color: white;
+    cursor: pointer;
+  }

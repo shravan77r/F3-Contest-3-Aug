@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="stayles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-header">
+            <h1>Header</h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Signup</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </div>
+    <hr>
+    <section class="contatiner">
+        <div class="profile">
+            <h2>Profile</h2>
+            <div id="profile-details"></div>
+            <input type="button" id="btnlogout" onclick="fnlogout()" value="Logout">
+        </div>
+    </section>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem("user"));
+
+        if (!user) {
+            window.location.href = "/index.html";
+
+        } else {
+            const profileDetails = document.getElementById("profile-details");
+            profileDetails.innerHTML = `
+            <p><strong>Full Name:</strong> ${user.fullname}</p>
+            <p><strong>Email:</strong> ${user.email}</p>
+            <p><strong>Password:</strong> ${user.password}</p>
+          `;
+        }
+
+        function fnlogout() {
+            localStorage.removeItem("user");
+            window.location.href = "/index.html";
+        }
+    </script>
+
+</body>
+
+</html>
