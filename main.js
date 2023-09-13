@@ -1,7 +1,7 @@
 const user = JSON.parse(localStorage.getItem("user"));
 
 if (user && user.accessToken) {
-    window.location.href = "/profile.html";
+    window.location.href = "./profile.html";
 }
 
 const btnsubmit = document.getElementById('btnsubmit');
@@ -44,7 +44,7 @@ btnsubmit.addEventListener('click', (e) => {
     localStorage.setItem("user", JSON.stringify(user));
     validation_message.innerText = "";
     success_message.innerText = "Successfully signed Up!";
-    window.location.href = "/profile.html";
+    window.location.href = "./profile.html";
 
 });
 function generateAccessToken() {
